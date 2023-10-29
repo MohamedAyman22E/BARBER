@@ -398,7 +398,7 @@ header {
 }
 .allAboutPricin .button {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(170px, auto));
   gap: 5px;
 }
 .allAboutPricin .button button {
@@ -477,7 +477,6 @@ header {
   color: var(--harvest-gold);
 }
 /* end pricing */
-
 /* start gallery */
 .gallery .headingGallery{
   display: flex;
