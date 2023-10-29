@@ -15,11 +15,8 @@ img {
 section {
   width: 100%;
   position: relative;
-  overflow-y: hidden;
 }
-body {
-  overflow-x: hidden;
-}
+
 .container_header {
   width: 100%;
   padding: var(--section-padding-header);
@@ -33,6 +30,15 @@ h2,
 h3 {
   font-family: var(--ff-oswald);
   line-height: 1.3;
+}
+
+::-webkit-scrollbar{
+  background-color: var(--indian-yellow_10) ;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var( --indian-yellow);
+  border-radius: 20px;
 }
 :root {
   --rich-black-fogra-39_50: hsla(0, 0%, 5%, 0.5);
@@ -216,8 +222,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  position: relative;
 }
 .btn::before {
   content: "";
@@ -238,7 +242,7 @@ header {
 .btn i {
   position: absolute;
   right: 7px;
-  top: -50%;
+  top: -70%;
   color: #fff;
 }
 /* end btn */
@@ -287,7 +291,6 @@ header {
   color: #fff;
   margin-top: 20px;
 }
-
 .home .btnHome i {
   position: absolute;
   top: -12px;
@@ -425,7 +428,6 @@ header {
 .allAboutPricin .button button:hover i {
   color: #fff;
 }
-
 .allBricingBoxs {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -475,6 +477,269 @@ header {
   color: var(--harvest-gold);
 }
 /* end pricing */
+
+/* start gallery */
+.gallery .headingGallery{
+  display: flex;
+  justify-content: space-between;
+}
+.gallery .headingGallery .info h2{
+font-size: 40px;
+text-transform: uppercase;
+margin-bottom: 15px;
+}
+.headingGallery .btnGallery{
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 15px;
+  overflow: hidden;
+  font-family: var(--ff-oswald);
+ position: relative;
+ z-index: 1;
+ color: #fff;
+ background-color: var(--indian-yellow);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 50px;
+ width: 240px;
+ margin-top: 30px;
+}
+.headingGallery .btnGallery i{
+ color: #fff;
+ transform: translateY(-15px);
+}
+.headingGallery .btnGallery::before{
+  content: "";
+  position: absolute;
+  background-color: var(--eerie-black-1);
+  inset: 0;
+  z-index: -1;
+  transform: skewY(-15deg) scaleY(0);
+  transition: var(--transition-2);
+  border-radius: 5px;
+}
+.headingGallery .btnGallery:hover:before{
+  transform: skewY(-15deg) scaleY(2.5);
+}
+.allBoxGallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, auto));
+  gap: 15px;
+  align-items: center;
+  margin-top: 50px;
+}
+.allBoxGallery .box{
+  position: relative;
+}
+.allBoxGallery .box .info{
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  margin: auto;
+  transition: .3s;
+  scale: 0;
+}
+.allBoxGallery .box:hover .info{
+  scale: 1;
+}
+.allBoxGallery .box .info .text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+}
+.allBoxGallery .box .info .text h2{
+  margin-bottom: 15px;
+}
+.allBoxGallery .box .info i{
+  padding: 10px 15px;
+  background-color: var(--harvest-gold);
+  color: #fff;
+  transition: .3s;
+}
+.allBoxGallery .box .info i:hover{
+  background-color:#fff ;
+  color: var(--harvest-gold);
+  cursor: pointer;
+}
+/* end btn */
+.headingContact{
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.headingContact h2{
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.headingContact p{
+  width: 50%;
+  margin: auto;
+  line-height: 30px;
+}
+.contact .container .center {
+  background-color: var(--harvest-gold);
+  padding:60px 40px;
+  text-align: center;
+}
+.contact .container .center form .small{
+  display: flex;
+  gap: 10px;
+}
+.contact .container .center form .small input,
+.contact .container .center form textarea,
+.contact .container .center form .big input{
+  margin: 10px 0;
+  width: 100%;
+  padding: 15px 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.contact .container .center form button{
+  width: 100%;
+  font-size: 30px;
+ color: #fff;
+ font-weight: 700;
+ text-transform: uppercase;
+ background-color: transparent;
+ border: 2px solid #fff;
+ border-radius: 5px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 10px 0; 
+}
+/* start end */
+.end{
+  background-color: var(--eerie-black-1);
+  position: relative;
+}
+.end  .container{
+  padding: 0 13%;
+}
+.end  .container .top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--sonic-silver);
+  padding: 20px;
+  position: relative;
+  top: 0;
+}
+.end .container .top .logo{
+  width: 25%;
+  padding:30px 10px;
+  text-align: center;
+  position: relative;
+  border: 2px solid var(--sonic-silver);
+}
+.end .container .top .logo h2 {
+  font-size: var(--fs-18);
+  color: var(--indian-yellow);
+  font-weight: var(--fw-700);
+}
+.end .container .top .logo span {
+  letter-spacing: 2px;
+  opacity: 0.8;
+  color: #fff;
+}
+.end .container .top .form{
+  width: 70%;
+  padding: 0 40px;
+}
+.end .container .top .form form{
+  position: relative;
+}
+.end .container .top .form form input{
+  padding: 25px;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.end .container .top .form button{
+  position: absolute;
+  top:-22px;
+  right: 12px;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 15px;
+  overflow: hidden;
+  font-family: var(--ff-oswald);
+ z-index: 1;
+ color: #fff;
+ background-color: var(--indian-yellow);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 50px;
+ width: 160px;
+ margin-top: 30px;
+ border: none;
+ outline: none;
+}
+.end .container .top .form button::before{
+   content: "";
+   position: absolute;
+   background-color: var(--eerie-black-1);
+   inset: 0;
+   z-index: -1;
+   transform: skewY(-15deg) scaleY(0);
+   transition: var(--transition-2);
+   border-radius: 5px;
+ }
+ .end .container .top .form button:hover:before{
+   transform: skewY(-15deg) scaleY(2.5);
+ }
+ .end .bottom{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  gap: 30px;
+  margin-top: 50px;
+  color: #fff;
+ }
+ .end .bottom ul li{
+  margin: 15px 0;
+ }
+ .end .bottom .opacity li{
+  opacity: .5;
+ }
+ .end .bottom  .head{
+  margin-bottom: 30px;
+ }
+ .end .bottom .picuture li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+ }
+ .end .bottom .picuture li h2{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+ }
+ .end .bottom .picuture li span{
+  opacity: .5;
+ }
+ .end .bottom .picuture img{
+  width: 50px;
+ }
+ .end .bottom .conta li i{
+  color: var(--harvest-gold);
+  margin-right: 10px;
+ }
+ .end .bottom .conta li span{
+  opacity: .5;
+ }
 @media (max-width: 1395px) {
   :root {
     --section-padding-header: 0 4%;
@@ -549,6 +814,22 @@ header {
     font-size: 3.9rem;
   }
 }
+@media (max-width:825px) {
+.gallery .headingGallery{
+  flex-direction: column;
+}
+.end  .container .top{
+  flex-direction: column;
+}
+.end .container .top .logo{
+ border: none;
+ width: 100%;
+}
+.end .container .top .form{
+  width: 100%;
+  margin-top: 20px;
+}
+}
 @media (max-width: 805px) {
   .header_top_list {
     flex-direction: column;
@@ -562,6 +843,15 @@ header {
   }
   .heading {
     width: 90%;
+  }
+  .allBoxGallery .box .info .text h2{
+    font-size: 15px;
+  }
+  .allBoxGallery .box .info .text span{
+    font-size: 15px;
+  }
+  .headingContact p{
+    width:70%;
   }
 }
 @media (max-width: 690px) {
@@ -594,13 +884,31 @@ header {
   .aboutBox .box h4 {
     font-size: 10px;
   }
+  .headingContact h2{
+    font-size: 25px;
+  }
+  .headingContact p{
+    width: 80%;
+  }
+  .contact .container .center form .small{
+    flex-direction: column;
+  }
+  form button h2{
+    font-size: 30px;
+  }
+.end .container .top .form button{
+ position: relative; 
+    right: 0%; 
+}
 }
 @media (max-width: 445px) {
   .allBricingBoxs .box {
     flex-direction: column;
   }
+  form button h2{
+    font-size: 20px;
+  }
 }
-
 @media (max-width: 402px) {
   .home_info h2 {
     font-size: 1.5rem;
@@ -611,5 +919,14 @@ header {
   }
   .heading h2 {
     font-size: 20px;
+  }
+  .headingContact h2{
+    font-size: 20px;
+  }
+  .headingContact p{
+    width: 90%;
+  }
+  .btnContact{
+    font-size: 15px;
   }
 }
